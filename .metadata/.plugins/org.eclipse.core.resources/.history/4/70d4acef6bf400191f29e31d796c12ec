@@ -1,0 +1,30 @@
+package xyz.ysy520.io;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+
+/**
+ * BufferedReader BufferedWriter
+ * @author yangshengyong
+ *
+ */
+public class Test06BufferedReader {
+	public static void main(String[] args) {
+		File f = new File("BufferedReaderTest.txt");
+		String s[] = {"string0", "string1", "string2"};
+		
+		try {
+			FileWriter fw = new FileWriter(f);
+			BufferedWriter bwfw = new BufferedWriter(fw);
+			for (int i = 0; i<s.length;i++) {
+				bwfw.write(s[i]);
+				bwfw.newLine();
+			}
+			bwfw.close();
+			fw.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

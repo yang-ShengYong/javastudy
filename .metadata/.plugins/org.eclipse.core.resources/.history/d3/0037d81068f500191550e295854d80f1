@@ -1,0 +1,37 @@
+package xyz.ysy520.oo;
+
+public class TestPolym01 {
+	public static void main(String[] args) {
+		Square s = new Square();
+		Parall p = new Parall();
+		Quadrangle q = new Quadrangle();
+		
+		q.draw(s);
+		q.draw(p);
+		
+	}
+}
+
+class Quadrangle {
+	private Quadrangle[] qtest = new Quadrangle[6];
+	private int nextIndex = 0;
+	
+	public void draw (Quadrangle q) {
+		if (nextIndex < qtest.length) {
+			qtest[nextIndex] = q;
+			nextIndex++;
+		}
+	}
+}
+
+class Square extends Quadrangle {
+	public Square () {
+		System.out.println("Square");
+	}
+}
+
+class Parall extends Quadrangle {
+	public Parall () {
+		System.out.println("Parall");
+	}
+}

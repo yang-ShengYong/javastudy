@@ -1,0 +1,35 @@
+package xyz.ysy520.oo4;
+
+public class TestReflect {
+	public static void main(String[] args) {
+		Car c = new Car();
+		System.out.println(c.getClass());
+		System.out.println(c.getClass().getSuperclass());
+		try {
+			System.out.println(c.getClass().getField("id"));
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchFieldException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
+
+class Vehicle {
+	//成员变量
+	int id = 107;
+	
+	public void run () {
+		
+	}
+}
+
+class Car extends Vehicle {
+	int id = 1007;
+	
+	public void rush () {
+		
+	}
+}

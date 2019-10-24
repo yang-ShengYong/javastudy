@@ -1,0 +1,20 @@
+package xyz.ysy520.oo;
+
+import java.sql.*;
+import com.mysql.jdbc.*;
+import com.mysql.jdbc.Connection;
+/**
+ * 测试建立数据库连接
+ * @author yangshengyong
+ *
+ */
+public class Test01 {
+	public static void main(String[] args) {
+		try {
+			java.sql.Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "123456");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

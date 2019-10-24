@@ -1,0 +1,15 @@
+package xyz.ysy520.io;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Test03FileIO {
+	public static void main(String[] args) throws IOException
+	{
+		File file = new File("C:\\Users\\yangshengyong\\Desktop\\work\\01 - 数据处理与数据库操作\\01 - 数据处理与数据库操作\\data");
+		InputStream f = new FileInputStream(file);
+		System.out.println(f);
+	}
+}

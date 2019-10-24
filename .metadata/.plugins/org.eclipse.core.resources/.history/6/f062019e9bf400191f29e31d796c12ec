@@ -1,0 +1,14 @@
+package xyz.ysy520.oo;
+/**
+ * 泛型
+ * 1、可以传不同类型（引用类型和包装类）参数，但不能是原始类型
+ * 2、可以对传进来的参数有所限制
+ * @author yangshengyong
+ *
+ */
+public class TestGeneric {
+	public static void main(String[] args) {
+	    
+	}
+	
+}

@@ -1,0 +1,19 @@
+package xyz.ysy520.oo;
+
+import java.util.Date;
+
+/**
+ * 	字符串格式化
+ * 		日期格式化
+ * @author yangshengyong
+ *
+ */
+public class FormatString {
+	public static void main(String[] args) {
+		Date date = new Date();
+		
+		String s = String.format("%te", date);
+		
+		System.out.println(s);
+	}
+}

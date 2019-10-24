@@ -1,0 +1,24 @@
+package xyz.ysy520.oo;
+
+import xyz.ysy520.oo.Outer;
+
+public class TestStaticInnerClass {
+	public static void main(String[] args) {
+		Outer.Inner inner = Outer.new Inner();
+		inner.show();
+	}
+}
+
+class Outer {
+	private int age = 10;
+	public void testOuter() {
+		
+	}
+	static class Inner{ //内部类，可直接访问外部类的成员变量
+		public void show () {
+			int age = 30;
+			System.out.println();
+			System.out.println(age);
+		}
+	}
+}

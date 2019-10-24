@@ -1,0 +1,17 @@
+package xyz.ysy520.oo;
+
+/**
+ * 	测试建立数据库连接
+ * @author yangshengyong
+ *
+ */
+public class Test01 {
+	public static void main(String[] args) {
+		try {
+			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,22 @@
+/**
+ * 
+ * @author yangshengyong
+ *
+ */
+
+public class Test01 {
+	public static void main(String[] args) {
+		long sum = 0;
+		byte b = 1;
+		short s = 2;
+		int i = 3;
+		char c = 'c';
+		String s1 = "abc";
+		System.out.println(i = b + s);
+		System.out.println("");
+	}
+	
+	static void printSxt () {
+		System.out.println("abc");
+	}
+}

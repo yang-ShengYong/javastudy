@@ -1,0 +1,27 @@
+package xyz.ysy520.oo;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+/**
+ * 测试建立数据库连接
+ * @author yangshengyong
+ *
+ */
+public class Test01 {
+	public static void main(String[] args) {
+		try {
+			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+			
+			try {
+				Connection conn = DriverManager.getConnection("jdbc:odbc:test", "root", "123456");
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

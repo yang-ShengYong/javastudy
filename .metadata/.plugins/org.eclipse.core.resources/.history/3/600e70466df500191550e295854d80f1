@@ -1,0 +1,16 @@
+package xyz.ysy520.oo;
+/**
+ * 	正则表达式
+ * 		匹配邮箱
+ * @author yangshengyong
+ *
+ */
+public class TestRegExp {
+	public static void main(String[] args) {
+		String reg = "\\w+@\\w+(\\.\\w{2,3})*\\.\\w{2,3}";
+		String e1 = "qwe@ds.dwd.cn";
+		
+		System.out.println(e1.matches(reg));
+	}
+
+}

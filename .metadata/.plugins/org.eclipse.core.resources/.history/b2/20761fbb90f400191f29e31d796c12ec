@@ -1,0 +1,132 @@
+package xyz.ysy520.abc;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.InputStreamReader;
+
+/**
+ * 功能：将Data部分信息写入“TEST_BREAKER”表
+ * @author yangshengyong
+ *
+ */
+public class DataWriteToTable {
+	public static void main(String[] args) {
+		//判断e:\breakerdata下是否有文件
+		String path = "e:\\breakerdata";
+		File dir = new File(path);
+		
+		//创建目录
+		if (!dir.exists()) {
+			try {
+				dir.mkdirs();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		//从文件中获取内容
+		getFileContent(dir);
+	}
+	
+	public static void getFileContent (File dir) {
+		File fArr[] = dir.listFiles();
+		
+		for (int i = 0;i<fArr.length;i++) {
+			//将每个文件输出
+			try {
+				BufferedReader bufr = new BufferedReader(
+						new InputStreamReader(
+								new FileInputStream(fArr[i]), "UTF-8")
+						);
+				String s = null;
+				String type = null;
+				int index = 1;
+				Data data = new Data();
+				
+				while ((s = bufr.readLine()) != null) {
+					if (s.startsWith("#")) {
+						String arr[] = s.split("\\s+");
+						
+						if(index == 1) {
+							type = arr[2];
+						} else {
+							data.setCode(arr[1]);
+							data.setDescription(arr[2]);
+							data.setNormalOpen(arr[3]);
+							data.setEqcontainer(arr[4]);
+							data.setBaseVoltage(arr[5]);
+							if (arr.length>6) {
+								data.setIpAddr(arr[6]);
+							} else {
+								data.setIpAddr(null);
+							}
+						}
+						System.out.println(data.getCode());
+						System.out.println(data.getDescription());
+						System.out.println(data.getNormalOpen());
+						System.out.println(data.getEqcontainer());
+						System.out.println(data.getBaseVoltage());
+						System.out.println(data.getIpAddr());
+						
+						index++;
+					}
+					
+				}
+				
+				bufr.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			System.out.println();
+		}
+	}
+}
+
+class Data {
+	private String code = null;
+	private String description = null;
+	private String normalOpen = null;
+	private String eqcontainer = null;
+	private String baseVoltage = null;
+	private String ipAddr = null;
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getNormalOpen() {
+		return normalOpen;
+	}
+	public void setNormalOpen(String normalOpen) {
+		this.normalOpen = normalOpen;
+	}
+	public String getEqcontainer() {
+		return eqcontainer;
+	}
+	public void setEqcontainer(String eqcontainer) {
+		this.eqcontainer = eqcontainer;
+	}
+	public String getBaseVoltage() {
+		return baseVoltage;
+	}
+	public void setBaseVoltage(String baseVoltage) {
+		this.baseVoltage = baseVoltage;
+	}
+	public String getIpAddr() {
+		return ipAddr;
+	}
+	public void setIpAddr(String ipAddr) {
+		this.ipAddr = ipAddr;
+	}
+	
+}

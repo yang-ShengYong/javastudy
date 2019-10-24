@@ -1,0 +1,24 @@
+/**
+ * 
+ * @author yangshengyong
+ *
+ */
+import java.math.*;
+public class Test01 {
+	public static void main(String[] args) {
+		BigDecimal bd = BigDecimal.valueOf(1.0);
+		bd = bd.subtract(BigDecimal.valueOf(0.1));
+		float f = 0.1F;
+		double d = 1.0/10;
+		System.out.println(f);
+		System.out.println(d);
+		System.out.println(f == d);
+		System.out.println(bd);
+		System.out.println(1.0-0.1);
+		System.out.println((short)3.14);
+	}
+	
+	static void printSxt () {
+		System.out.println("abc");
+	}
+}

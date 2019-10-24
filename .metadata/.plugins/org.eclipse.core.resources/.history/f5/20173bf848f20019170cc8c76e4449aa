@@ -1,0 +1,9 @@
+package xyz.ysy520.ysy;
+
+import xyz.ysy520.test.User;
+
+public class Test {
+	public static void main(String[] args) {
+		User u = new User();
+	}
+}

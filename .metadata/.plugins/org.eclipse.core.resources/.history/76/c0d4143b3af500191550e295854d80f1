@@ -1,0 +1,24 @@
+package xyz.ysy520.oo;
+/**
+ * 	包装类及常用方法
+ * 	Byte
+ * 	Short
+ * 	Integer
+ * 	Long
+ * 	Float
+ * 	Double
+ * 	Character
+ * 	Boolean
+ * 	
+ * @author yangshengyong
+ *
+ */
+public class TestWrapper01 {
+
+	public static void main(String[] args) {
+		Integer i = new Integer("129");
+		
+		System.out.println(i.byteValue());
+	}
+
+}

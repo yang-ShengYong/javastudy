@@ -1,0 +1,18 @@
+/**
+ * 
+ * @author yangshengyong
+ *
+ */
+import java.math.*;
+public class Test01 {
+	public static void main(String[] args) {
+//		BigDecimal bd = BigDecimal.valueOf(1.0);
+		float f = 0.1F;
+		double d = 1.0/10;
+		System.out.println(f == d);
+	}
+	
+	static void printSxt () {
+		System.out.println("abc");
+	}
+}

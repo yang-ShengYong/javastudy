@@ -1,0 +1,14 @@
+/**
+ * 	重要的Object类
+ * 	是所有对象继承的根
+ * 	每一个类都有一个Object类作为父类
+ */
+
+package xyz.ysy520.oo;
+
+public class TestObject {
+	public static void main(String[] args) {
+		Object obj;
+		System.out.println(obj.toString());
+	}
+}

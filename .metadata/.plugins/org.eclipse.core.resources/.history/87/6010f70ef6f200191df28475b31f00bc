@@ -1,0 +1,20 @@
+package xyz.ysy520.oo;
+
+public class TestOverride {
+	public static void main(String[] args) {
+		Car c = new Car();
+		c.run();
+	}
+}
+
+class Vehicle {
+	public void run () {
+		System.out.println("run 父类方法");
+	}
+}
+
+class Car extends Vehicle {
+	public void run () {
+		System.out.println("run 子类方法");
+	}
+}

@@ -1,0 +1,36 @@
+package xyz.ysy520.oo;
+/**
+ * 常量池 
+ * 字符串比较 equals 不要用 ==
+ * 常用方法
+ * 	charAt()
+ * 	length()
+ * 	equals()
+ * 	equalsIgnoreCase() 忽略大小写比较
+ * 	indexOf()
+ * 	subString(4) 从下标为4开始截取到最后
+ * 	trim() 去首尾空格生成新字符串
+ * 	toLowerCase()
+ * 	toUpperCase()
+ * @author yangshengyong
+ *
+ */
+public class TestString {
+	public static void main(String[] args) {
+		String s1 = "string";
+		String s2 = "String";
+		String s3 = new String("string");
+		String s4 = new String("123");
+		System.out.println(s1 == s2);
+		System.out.println(s1 == s3);
+		System.out.println(s3.equals(s1));
+		System.out.println(s1.charAt(3));
+		System.out.println(s1.length());
+		System.out.println(s1.equalsIgnoreCase(s2));
+		System.out.println(s1.indexOf("")); //0
+		System.out.println(s1.lastIndexOf("")); //6
+		System.out.println(s1.substring(4));
+		System.out.println(Integer.parseInt(s4));
+		FormatString f = new FormatString();
+	}
+}

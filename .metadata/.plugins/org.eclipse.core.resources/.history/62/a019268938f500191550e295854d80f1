@@ -1,0 +1,15 @@
+package xyz.ysy520.oo3;
+/**
+ * 	测试静态变量和方法
+ * @author yangshengyong
+ *
+ */
+public class TestStatic {
+	static {
+		System.out.println("static代码块");
+	}
+	public static void main(String[] args) {
+		
+	}
+
+}

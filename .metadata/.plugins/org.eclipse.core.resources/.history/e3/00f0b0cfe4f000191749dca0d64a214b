@@ -1,0 +1,16 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class BallGame extends JFrame {
+	//´°¿Ú¼ÓÔØ
+	void launchFrame() {
+		setSize(300,300);
+		setLocation(50,50);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		System.out.println("helloworld");
+		BallGame game=new BallGame();
+		game.launchFrame();
+	}
+}

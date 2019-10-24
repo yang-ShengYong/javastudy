@@ -1,0 +1,21 @@
+package xyz.ysy520.game;
+
+import java.awt.Graphics;
+import java.awt.Image;
+
+public class Plane extends GameObject {
+	boolean left, up, right, down;
+	boolean live = true;
+	
+	// ÷ÿ–¥drawSelf∑Ω∑®
+	public void drawSelf(Graphics g) {
+		g.drawImage(img, (int)x, (int)y, null);
+		x++;
+	}
+	
+	public Plane (Image img, int x, int y) {
+		this.img = img;
+		this.x = x;
+		this.y = y;
+	}
+}

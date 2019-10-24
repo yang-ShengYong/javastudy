@@ -1,0 +1,8 @@
+package xyz.ysy520.ysy;
+
+public class Test {
+	public static void main(String[] args) {
+		xyz.ysy520.test.User u = new xyz.ysy520.test.User();
+		System.out.println("Ёиак");
+	}
+}

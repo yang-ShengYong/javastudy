@@ -1,0 +1,26 @@
+package xyz.ysy520.oo;
+
+public class TestSuper {
+	public static void main(String[] args) {
+		new Child("zhangsan", 18);
+	}
+}
+
+class Father {
+	String name;
+	int age;
+	
+	public Father (String name, int age) {
+		this.name = name;
+		this.age = age;
+		
+		System.out.println("father");
+	}
+}
+
+class Child extends Father {
+	public Child (String name, int age) {
+		super(name, age);
+		System.out.println("child");
+	}
+}

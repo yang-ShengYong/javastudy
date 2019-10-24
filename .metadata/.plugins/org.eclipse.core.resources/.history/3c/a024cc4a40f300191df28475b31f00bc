@@ -1,0 +1,52 @@
+package xyz.ysy520.game;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.JFrame;
+/**
+ * 飞机游戏主窗口
+ * @author yangshengyong
+ *
+ */
+public class MyGameFrame extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	public static void main(String[] args) {
+		MyGameFrame f = new MyGameFrame();
+		f.launchFrame();
+	}
+
+	Image plane = GameUtil.getImage("images/plane.png");
+	
+	@Override
+	public void paint(Graphics g) { //自动被调用。 g相当于一只画笔
+		
+		Color c = g.getColor();
+		g.setColor(Color.BLUE);
+		g.drawLine(0, 0, 200, 200);
+	}
+	/**
+	 * 初始化窗口
+	 */
+	public void launchFrame() {
+		this.setTitle("飞机游戏");
+		this.setSize(500, 500);
+		this.setLocation(300, 300);
+		this.setVisible(true);
+		
+		this.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				System.exit(0);
+			}
+		});
+	}
+	
+}

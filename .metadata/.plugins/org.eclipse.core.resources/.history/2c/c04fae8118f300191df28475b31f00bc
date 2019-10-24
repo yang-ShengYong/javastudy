@@ -1,0 +1,34 @@
+package xyz.ysy520.oo;
+/**
+ * 	∂‡Ã¨
+ * @author yangshengyong
+ *
+ */
+public class TestPolym {
+	public static void main(String[] args) {
+		Dog d = new Dog();
+		animalShout(d);
+	}
+	
+	static void animalShout(Animal a) {
+		a.shout();
+	}
+}
+
+class Animal {
+	public void shout () {
+		System.out.println();
+	}
+}
+
+class Dog extends Animal {
+	public void shout () {
+		System.out.print("w w w");
+	}
+}
+
+class Cat extends Animal {
+	public void shout () {
+		System.out.println("m m m");
+	}
+}

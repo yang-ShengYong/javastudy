@@ -1,0 +1,25 @@
+package xyz.ysy520.oo4;
+
+public class TestReflect {
+	public static void main(String[] args) {
+		Car c = new Car();
+		System.out.println(c.getClass().getName());
+	}
+}
+
+class Vehicle {
+	//成员变量
+	int id = 107;
+	
+	public void run () {
+		
+	}
+}
+
+class Car extends Vehicle {
+	int id = 1007;
+	
+	public void rush () {
+		
+	}
+}

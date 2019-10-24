@@ -1,0 +1,16 @@
+package xyz.ysy520.oo3;
+
+public class TestInstanceof {
+	public static void main(String[] args) {
+		Car c = new Car();
+		System.out.println(c instanceof Vehicle);
+	}
+}
+
+class Vehicle {
+	
+}
+
+class Car extends Vehicle {
+	
+}

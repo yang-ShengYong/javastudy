@@ -1,0 +1,21 @@
+package xyz.ysy520.io;
+/**
+ * 文件输入/输出流
+ */
+import java.io.*;
+
+public class Test03FileIOStream {
+	public static void main(String[] args) {
+		File f = new File("C:\\Users\\yangshengyong\\Desktop\\work\\01 - 数据处理与数据库操作\\01 - 数据处理与数据库操作\\data");
+		
+		try {
+			FileInputStream in = new FileInputStream(f);
+			byte byt[] = new byte[1024];
+			int len = in.read(byt);
+			System.out.println(new String(byt, 0, len));
+			in.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

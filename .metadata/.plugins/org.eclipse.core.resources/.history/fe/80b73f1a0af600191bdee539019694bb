@@ -1,0 +1,21 @@
+package xyz.ysy520.io;
+
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+
+public class Test08DataInputStream {
+	public static void main(String[] args) {
+		try {
+			FileOutputStream fs = new FileOutputStream("word");
+			DataOutputStream ds = new DataOutputStream(fs);
+			
+			ds.writeUTF("writeUTF写入数据");
+			ds.writeChars("writeChars写入数据");
+			ds.writeBytes("writeBytes写入数据");
+			
+			ds.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

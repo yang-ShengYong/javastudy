@@ -1,0 +1,13 @@
+package xyz.ysy520.oo;
+
+/**
+ * 测试建立数据库连接
+ * @author yangshengyong
+ *
+ */
+public class Test01 {
+	public static void main(String[] args) {
+		
+		
+	}
+}

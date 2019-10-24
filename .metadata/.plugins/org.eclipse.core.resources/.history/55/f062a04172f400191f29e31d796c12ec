@@ -1,0 +1,32 @@
+package xyz.ysy520.abc;
+
+import java.io.File;
+
+/**
+ * 功能：将Data部分信息写入“TEST_BREAKER”表
+ * @author yangshengyong
+ *
+ */
+public class DataWriteToTable {
+	public static void main(String[] args) {
+		//判断e:\breakerdata下是否有文件
+		String path = "e:\\breakerdata";
+		File f = new File(path);
+		
+		//创建目录
+		if (!f.exists()) {
+			try {
+				f.mkdirs();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		File fArr[] = f.listFiles();
+		
+		for (int i = 0;i<fArr.length;i++) {
+			System.out.println(fArr[i].getName());
+		}
+		System.out.println();
+	}
+}

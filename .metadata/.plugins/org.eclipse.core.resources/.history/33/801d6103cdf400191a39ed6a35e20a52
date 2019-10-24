@@ -1,0 +1,25 @@
+package xyz.ysy520.oo;
+
+import java.sql.Connection;
+import java.sql.Driver;
+import java.util.Properties;
+
+/**
+ * 测试建立数据库连接
+ * @author yangshengyong
+ *
+ */
+public class Test01 {
+	public static void main(String[] args) throws Exception
+	{
+		Driver driver = null;
+		
+		String url = null;
+		
+		Properties info = null;
+		
+		Connection conn = driver.connect(url, info);
+		
+		System.out.println(conn);
+	}
+}

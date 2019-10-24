@@ -1,0 +1,27 @@
+/**
+ *	方法重写
+ *	 
+ */
+
+package xyz.ysy520.oo;
+
+public class TestOverride {
+	public static void main(String[] args) {
+		Car c = new Car();
+		c.run();
+	}
+}
+
+class Vehicle {
+	public Person run () {
+		System.out.println("run 父类方法");
+		return new Person();
+	}
+}
+
+class Car extends Vehicle {
+	public Student run () {
+		System.out.println("run 子类方法");
+		return new Student();
+	}
+}
